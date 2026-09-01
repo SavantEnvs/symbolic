@@ -1,0 +1,10 @@
+project: savantenvs/symbolic
+target: fuzz_ppdb
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ppdb/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_ppdb
+    libfuzzer: true

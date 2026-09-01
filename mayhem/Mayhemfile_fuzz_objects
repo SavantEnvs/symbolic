@@ -1,0 +1,10 @@
+project: savantenvs/symbolic
+target: fuzz_objects
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_objects/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_objects
+    libfuzzer: true
